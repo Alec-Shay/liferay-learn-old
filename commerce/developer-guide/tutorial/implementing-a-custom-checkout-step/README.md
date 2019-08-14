@@ -142,7 +142,19 @@ Let's look at [N8N6CommerceCheckoutStep.java](./liferay-n8n6.zip/n8n6-impl/src/m
 
 ### Create the Checkout Step
 
-Add the implementation for the `processAction` and `render` methods and add a JSP to render the screen for the new checkout step. Our example will display text on a custom screen, so we do not need any backend processing in the `processAction` implementation.
+Creating the checkout step itself requires these steps:
+
+1. Add business logic to `processAction`.
+2. Implement the `render`method.
+3. Configure the `ServletContext` for the module.
+4. Add a JSP to render the custom screen.
+5. Add the language key to `Language.properties`.
+
+#### 1. Add Business Logic to `processAction`
+
+Our example will display text on a custom screen, so we do not need any backend processing in the `processAction` implementation.
+
+#### 2. Implement the `render` Method
 
 ```java
 @Override
@@ -159,6 +171,8 @@ public void render(
 
 > We use a `JSPRenderer` to render the JSP for our checkout step (in this case, [terms_and_conditions.jsp](./liferay-n8n6.zip/n8n6-impl/src/main/resources/META-INF/resources/terms_and_conditions.jsp)). We also give it a `ServletContext` parameter to give a context for where to find the JSP we have created.
 
+#### 3. Configure the `ServletContext` for the Module
+
 Define the `ServletContext` using the symbolic name of our bundle so that it can find the JSP in our module:
 
 ```java
@@ -170,9 +184,13 @@ private ServletContext _servletContext;
 >
 > We also need to declare a unique value for `Web-ContextPath` in our bnd.bnd file so the `ServletContext` is correctly generated. In our example, `Web-ContextPath` is set to `/commerce-checkout-step`. See [bnd.bnd](./liferay-n8n6.zip/n8n6-impl/bnd.bnd) for a reference on these values.
 
-Next, define the JSP for our checkout step's screen in the UI. In our example, we are adding placeholder text; you can see the implementation at [terms_and_conditions.jsp](./liferay-n8n6.zip/n8n6-impl/src/main/resources/META-INF/resources/terms_and_conditions.jsp).
+#### 4. Add a JSP to Render the Custom Screen
 
-Lastly, define the language key for the name of our new checkout step. Add the key and its value to a [Language.properties](./liferay-n8n6.zip/n8n6-impl/src/main/resources/content/Language.properties) file within our module:
+In our example, we are adding placeholder text; you can see the implementation at [terms_and_conditions.jsp](./liferay-n8n6.zip/n8n6-impl/src/main/resources/META-INF/resources/terms_and_conditions.jsp).
+
+#### 5. Add the Language Key to `Language.properties`
+
+Add the language key and its value to a [Language.properties](./liferay-n8n6.zip/n8n6-impl/src/main/resources/content/Language.properties) file within our module:
 
 ```
 example-step=Example Step
