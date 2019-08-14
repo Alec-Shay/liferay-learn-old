@@ -84,21 +84,27 @@ public class N8N6CommerceCheckoutStep extends BaseCommerceCheckoutStep {
 >
 > The `commerce.checkout.step.order` value indicates how far into the checkout process the checkout step will appear. For example, the [shipping method checkout step](https://github.com/liferay/com-liferay-commerce/blob/2.0.3/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/ShippingMethodCommerceCheckoutStep.java) has a value of 20. Giving our checkout step a value of 21 ensures that it will appear immediately after the shipping method step.
 
-### Implement the `CommerceCheckoutStep` Interface
+### Walk Through the `CommerceCheckoutStep` Interface
 
 We can extend [BaseCommerceCheckoutStep](https://github.com/liferay/com-liferay-commerce/blob/2.0.3/commerce-api/src/main/java/com/liferay/commerce/util/BaseCommerceCheckoutStep.java) to give us functionality to build on top of. This simplifies our work to implement this interface.
 
-The following three methods are required in addition to extending the base class:
+We must implement these methods in addition to extending the base class:
 
 ```java
 public String getName();
 ```
+
+> This method returns the name of our checkout step. This name may be a language key that corresponds to the name that will appear in the UI.
+>
+> We need to add the language key for the name to display correctly. See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.
 
 ```java
 public void processAction(
         ActionRequest actionRequest, ActionResponse actionResponse)
     throws Exception;
 ```
+
+> If backend processing is required, use the `processAction` method to implement business logic with the information passed through the `ActionRequest`.
 
 ```java
 public void render(
@@ -107,42 +113,11 @@ public void render(
     throws Exception;
 ```
 
-Let's look at [N8N6CommerceCheckoutStep.java](./liferay-n8n6.zip/n8n6-impl/src/main/java/com/acme/n8n6/internal/commerce/util/N8N6CommerceCheckoutStep.java) to review the implementation of each required method in sequence.
-
-1. ```java
-    @Override
-    public String getName() {
-        return NAME;
-    }
-   ```
-
-    > This method returns the name of our checkout step. This name may be a language key that corresponds to the name that will appear in the UI.
-    >
-    > We need to add the language key for the name to display correctly. See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.
-
-1. ```java
-    @Override
-    public void processAction(
-            ActionRequest actionRequest, ActionResponse actionResponse)
-        throws Exception {
-    }
-   ```
-
-    > If backend processing is required, use the `processAction` method to implement business logic with the information passed through the `ActionRequest`.
-
-1. ```java
-    public void render(
-            HttpServletRequest httpServletRequest,
-            HttpServletResponse httpServletResponse)
-        throws Exception {
-    }
-   ```
-
-    > This will be where we add the code to render a customized screen for our checkout step.
+> This will be where we add the code to render a customized screen for our checkout step.
 
 ### Create the Checkout Step
 
-Creating the checkout step itself requires these steps:
+A custom screen for the checkout step and backend logic to process any input will comprise the checkout step itself. We will follow these steps:
 
 1. Add business logic to `processAction`.
 2. Implement the `render`method.
@@ -169,7 +144,7 @@ public void render(
 }
 ```
 
-> We use a `JSPRenderer` to render the JSP for our checkout step (in this case, [terms_and_conditions.jsp](./liferay-n8n6.zip/n8n6-impl/src/main/resources/META-INF/resources/terms_and_conditions.jsp)). We also give it a `ServletContext` parameter to give a context for where to find the JSP we have created.
+> Use a `JSPRenderer` to render the JSP for our checkout step (in this case, [terms_and_conditions.jsp](./liferay-n8n6.zip/n8n6-impl/src/main/resources/META-INF/resources/terms_and_conditions.jsp)). Give it a `ServletContext` parameter to give a context for where to find the JSP we have created.
 
 #### 3. Configure the `ServletContext` for the Module
 
