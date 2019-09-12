@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Orders Menu &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Orders Menu</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/sales/orders-menu.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="orders-menu">
+<h1>Orders Menu<a class="headerlink" href="#orders-menu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>All orders in Liferay Commerce can be viewed and managed by an administrator in the <em>Orders</em> menu. Here, orders are displayed in the <em>Open</em>, <em>Pending</em>, and <em>Transmitted</em> tabs according to the order’s progress through the <a class="reference internal" href="order-life-cycle.html"><span class="doc">order life cycle</span></a>.</p>
+<p><img alt="Orders Menu Overview" src="../../../_images/0186.png" /></p>
+<p>This article gives an overview of the <em>Open</em>, <em>Pending</em>, and <em>Transmitted</em> tabs.</p>
+<div class="section" id="open">
+<h2>Open<a class="headerlink" href="#open" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>In this tab, the order activity is exclusively on the buyer』s side. A new order is created in the <em>Open</em> tab when a buyer adds products to their cart. The order remains in this tab until the buyer places the order.</p>
+<blockquote>
+<div><strong>Note</strong>: If <em>Approval Workflow</em> is enabled, orders remain in the <em>Open</em> tab until the workflow process has completed and the order is placed.</div></blockquote>
+<p><img alt="Open Tab" src="../../../_images/0256.png" /></p>
+</div>
+<div class="section" id="pending">
+<h2>Pending<a class="headerlink" href="#pending" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The <em>Pending</em> tab serves as a holding place for orders – this is helpful for business contexts where not all placed orders are immediately transmitted. When a buyer places an order, the order moves to the <em>Pending</em> tab. Here, the seller can modify, cancel or transmit the order.</p>
+<blockquote>
+<div><strong>Note</strong>: If <em>Transmission Workflow</em> is enabled, orders remain in the <em>Pending</em> tab throughout the workflow process, even if the seller rejects an order, sending it back to the buyer.</div></blockquote>
+<p><img alt="Pending Tab" src="../../../_images/0329.png" /></p>
+</div>
+<div class="section" id="transmitted">
+<h2>Transmitted<a class="headerlink" href="#transmitted" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>In this tab, the order activity is exclusively on the seller』s side. The seller transmits a <em>Pending</em> order by changing the order status (manually or via automation) from the “<em>To Transmit</em>” status to any other order status. At this point, the order moves to the <em>Transmitted</em> tab and, if configured,  is sent to an external system, such as Microsoft’s Dynamics GP, Oracle’s NetSuite, or SAP. The seller may then proceed with delivery of the ordered products to the buyer. Additional information may also be added to the order, such as an updated order status, shipping information and estimated arrival time.</p>
+<p><img alt="Transmitted Tab" src="../../../_images/0421.png" /></p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Order information in the <em>Orders</em> menu can also be presented to other users – particularly buyers – using the <em>Open Carts</em> widget (for orders on the <em>Open</em> tab) and the <em>Orders</em> widget (for orders on the <em>Pending</em> or <em>Transmitted</em> tabs). See <a class="reference internal" href="../content/pending-orders.html"><span class="doc">Pending Orders</span></a> and <a class="reference internal" href="../content/placed-orders.html"><span class="doc">Placed Orders</span></a> for details.</p>
+<ul class="simple">
+<li><a class="reference internal" href="order-life-cycle.html"><span class="doc">Order Life Cycle</span></a></li>
+<li><a class="reference internal" href="order-information.html"><span class="doc">Order Information</span></a></li>
+<li><a class="reference internal" href="order-workflows.html"><span class="doc">Order Workflows</span></a></li>
+<li>Order Management Statuses</li>
+<li>Advancing an Order to Transmitted</li>
+<li>Enabling Order Workflows</li>
+<li>Approving/Rejecting Orders in Order Workflows</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

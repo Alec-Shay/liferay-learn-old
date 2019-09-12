@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Related Products, Up-Sells, and Cross-Sells &mdash; Liferay Learn Commerce 2.0.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Related Products, Up-Sells, and Cross-Sells</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/catalog/related-products-up-sells-and-cross-sells.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="related-products-up-sells-and-cross-sells">
+<h1>Related Products, Up-Sells, and Cross-Sells<a class="headerlink" href="#related-products-up-sells-and-cross-sells" title="Permalink to this headline">¶</a></h1>
+<p>Product relations can be used to connect products. Once connected, a product displays the links to other products. Every related product must be assigned to a Product Relation Type. These products can then be displayed by a Product Publisher widget configured to source data from the appropriate type.</p>
+<p>When more than one Product Publisher widget is placed on a product detail page, multiple sets of related products may be shown. For instance, one widget might display a set of products that are alternatives to the product featured on the page, while another might display products that are accessories to the featured product.</p>
+<p>Note: If your site was built using an accelerator, then a number of product relation types are already in place. Here is a list of default Product Relations:</p>
+<ul class="simple">
+<li><strong>Up-Sell</strong>: Display products that are comparable to the featured product but have a higher sale value.</li>
+<li><strong>Spare</strong>: Display products that are spare parts or components for the featured product.</li>
+<li><strong>Related</strong>: A catch-all set.</li>
+<li><strong>Accessories</strong>: Display add-on products for use in conjunction with the featured products.</li>
+<li><strong>Cross-Sell</strong>: Display products complementary to the featured product.</li>
+</ul>
+<p><img alt="Product Relations: Brake Rotors and Fluid" src="../../../_images/055.png" /></p>
+<p>In the image above, the two related products are displayed in the Product Publisher widget at the bottom. You have the option to add more Product Publisher widgets configured with other types of Product Relations.</p>
+<div class="section" id="adding-a-new-product-relation-type">
+<h2>Adding a New Product Relation Type<a class="headerlink" href="#adding-a-new-product-relation-type" title="Permalink to this headline">¶</a></h2>
+<p>More Product Relation types may be added as necessary. This includes intangibles such as warranties. To add a new Product Relation:</p>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Configuration</em> → <em>System Settings</em>.</p>
+</li>
+<li><p class="first">Click <em>Catalog</em> in the <em>Commerce</em> section.</p>
+</li>
+<li><p class="first">Click <em>Product Relations</em> on the left menu.</p>
+</li>
+<li><p class="first">Click the <em>Add</em> button.</p>
+</li>
+<li><p class="first">Enter the new Product Relation in the <em>Type</em> field: Warranties.</p>
+</li>
+<li><p class="first">Click <em>Save</em>.</p>
+<p><img alt="Creating a New Product Relation" src="../../../_images/0133.png" /></p>
+</li>
+</ol>
+<p>The new Product Relation Type has been added.</p>
+</div>
+<div class="section" id="creating-relationships-between-products">
+<h2>Creating Relationships Between Products<a class="headerlink" href="#creating-relationships-between-products" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Select any product; for example, <em>Brake Pads</em>.</p>
+</li>
+<li><p class="first">Click on the <em>Product Relations</em> sub-tab.</p>
+</li>
+<li><p class="first">Click on <em>Related</em> in the left menu.</p>
+<p><img alt="Related Menu" src="../../../_images/0221.png" /></p>
+</li>
+<li><p class="first">Click the (+) button to add one or more relationships. In this example, select <em>Brake Rotors</em> and <em>Brake Fluid</em>.</p>
+</li>
+<li><p class="first">Click <em>Add</em>.</p>
+<p><img alt="Adding Two Products" src="../../../_images/045.png" /></p>
+</li>
+</ol>
+<p>These two products are now associated with <em>Brake Pads</em>. Note that this relationship is unidirectional; in other words, when viewing <em>Brake Pads</em> the new product relations will be visible but when viewing the <em>Brake Rotors</em> or <em>Brake Fluid</em> products, <em>Brake Pads</em> will <em>not</em> be listed as as a related product.</p>
+<p>Once the product relationships have been created, configure the Product Publisher widget to display the relations.</p>
+</div>
+<div class="section" id="displaying-product-relations">
+<h2>Displaying Product Relations<a class="headerlink" href="#displaying-product-relations" title="Permalink to this headline">¶</a></h2>
+<p>You can display product relations on a product display page by configuring a Product Publisher widget. You must have a <a class="reference external" href="https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-">product display page</a> in place first.</p>
+<ol>
+<li><p class="first">Search for a product (for example <em>Brake Pads</em>).</p>
+</li>
+<li><p class="first">Click <em>Brake Pads</em> to view the Product Details.</p>
+</li>
+<li><p class="first">Scroll to the bottom of the page to view the related products listed in the <em>Product Publisher</em> widget.</p>
+<p><img alt="Configuration Menu" src="../../../_images/063.png" /></p>
+</li>
+<li><p class="first">Click the <em>3-dot</em> icon (Options) → <em>Configuration</em>.</p>
+</li>
+<li><p class="first">Select <em>Product Relations related</em> from the <em>Data Source</em> dropdown menu.</p>
+<p><img alt="Choosing a Data Source" src="../../../_images/036.png" /></p>
+</li>
+<li><p class="first">Click <em>Save</em> and close the dialog box.</p>
+<p><img alt="Product Relations: Brake Rotors and Fluid" src="../../../_images/055.png" /></p>
+</li>
+</ol>
+<p>The example above shows how different products could be related, ensuring that customers can see the full range of products that may also be potentially useful.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

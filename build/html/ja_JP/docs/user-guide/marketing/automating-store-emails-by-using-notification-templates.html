@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Automating Store Emails by Using Notification Templates &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Automating Store Emails by Using Notification Templates</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/marketing/automating-store-emails-by-using-notification-templates.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="automating-store-emails-by-using-notification-templates">
+<h1>Automating Store Emails by Using Notification Templates<a class="headerlink" href="#automating-store-emails-by-using-notification-templates" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Notifications are automated emails sent to users. To send email notifications, first create a <em>Notification Template</em>. Notification Templates define the notification sender, trigger, and content of an email notification.</p>
+<blockquote>
+<div><strong>Note:</strong> To use Liferay Commerce』s Notifications feature, system administrators <em>first</em> have to configure the Mail settings for Liferay Digital Experience Platform (DXP). See <a class="reference external" href="https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP#configuring-mail">User Subscriptions and Mailing Lists</a> for more information.</div></blockquote>
+<p>Once the Mail settings have been configured, follow these steps to create a notification for a received order:</p>
+<ol>
+<li><p class="first">Navigate to <em>Site Administration</em> → <em>Commerce</em> → <em>Settings</em>.</p>
+</li>
+<li><p class="first">Click the <em>Notifications</em> tab.</p>
+</li>
+<li><p class="first">Click the <em>Notification Templates</em> sub-tab.</p>
+</li>
+<li><p class="first">Click the (+) button to create a new Notification Template.</p>
+</li>
+<li><p class="first">Enter the following:</p>
+<ul class="simple">
+<li><strong>Name</strong>: New Orders</li>
+<li><strong>Description</strong>: New orders template</li>
+<li><strong>Account Groups</strong>: (leave blank or designate an <strong>optional</strong> account group)</li>
+<li><strong>From Address</strong>: Your store』s email address (for example: <em>orders&#64;yourstore.com</em>)</li>
+<li><strong>From Name</strong>: Name of the store or a customer service representative</li>
+<li><strong>Type</strong>: Order Placed</li>
+<li><strong>Enabled</strong>: Switch the Toggle to <em>YES</em></li>
+<li><strong>Subject</strong>: Email subject (for example: <em>Your order has been received.</em>)</li>
+<li><strong>Body</strong>: Email body *</li>
+</ul>
+<p><img alt="Notification Template" src="../../../_images/0168.png" /></p>
+</li>
+<li><p class="first">Click <em>Save</em>.</p>
+</li>
+</ol>
+<p>The new Notification Template has been saved and your store will send an automated email to buyers after the store has received their order. Once the template is created, a new notification is added to the notification queue whenever an order is placed. Check the <em>Notifications Queue</em> sub-tab when an order has been placed. Liferay Commerce checks the queue at specified intervals to send any unsent notifications.</p>
+<div class="section" id="additional-notifications">
+<h2>Additional Notifications<a class="headerlink" href="#additional-notifications" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>Note 1</strong>: * Liferay Commerce offers two snippets to insert programmatically the order creator』s name and the order ID.</p>
+<ul class="simple">
+<li>[%ORDER_CREATOR%] inserts the user who created the order</li>
+<li>[%ORDER_CREATOR%] inserts the Order ID</li>
+</ul>
+<p><strong>Note 2</strong>: An extension point lets you implement other notifications: for a shipped order, a restocked product, a carrier exception, or any other event.</p>
+<p><strong>Note 3</strong>: To change the interval for when Liferay Commerce checks for unsent notifications, navigate to the <em>Control Menu</em> → <em>Configuration</em> → <em>System Settings</em>. Click <em>Orders</em> then the <em>Commerce Notification Queue</em>. The default values are listed in minutes. Change the values for the Check Interval and the Delete Interval if necessary.</p>
+<p><img alt="Changing Intervals" src="../../../_images/0245.png" /></p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-notification-template-type.html"><span class="doc">Adding a New Notification Type</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

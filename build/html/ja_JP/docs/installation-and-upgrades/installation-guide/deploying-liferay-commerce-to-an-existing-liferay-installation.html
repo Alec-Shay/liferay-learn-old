@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deploying Liferay Commerce to an Existing Liferay Installation &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Deploying Liferay Commerce to an Existing Liferay Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/installation-and-upgrades/installation-guide/deploying-liferay-commerce-to-an-existing-liferay-installation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deploying-liferay-commerce-to-an-existing-liferay-installation">
+<h1>Deploying Liferay Commerce to an Existing Liferay Installation<a class="headerlink" href="#deploying-liferay-commerce-to-an-existing-liferay-installation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>This article documents how to deploy Liferay Commerce to an existing Liferay DXP instance. Because Liferay Commerce is built on Liferay DXP, it is necessary to have an existing DXP 7.1 instance running. Prior to following this guide, please review System Requirements.</p>
+<p>To begin using Liferay Commerce:</p>
+<ol>
+<li><p class="first">Download the latest Liferay Commerce <code class="docutils literal notranslate"><span class="pre">LPKG</span></code>.</p>
+<ul class="simple">
+<li>Enterprise subscribers can download the latest <code class="docutils literal notranslate"><span class="pre">LPKG</span></code> from <a class="reference external" href="https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&amp;_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&amp;_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001">Help Center</a>.<ul>
+<li>Subscribers also need an order number or activation key for Liferay Commerce. See <a class="reference external" href="https://help.liferay.com/hc/en-us/articles/360018427391">Activating a Marketplace App Through a Proxy Server</a>.</li>
+</ul>
+</li>
+<li>The latest open source <code class="docutils literal notranslate"><span class="pre">LPKG</span></code> may be obtained from the <a class="reference external" href="https://commerce.liferay.dev/download">Liferay Commerce Community Site</a>.</li>
+</ul>
+</li>
+<li><p class="first">Deploy the <code class="docutils literal notranslate"><span class="pre">LPKG</span></code> to the <code class="docutils literal notranslate"><span class="pre">${liferay.home}/deploy</span></code> folder.</p>
+<blockquote>
+<div><p>To learn more about deploying applications to Liferay DXP, see <a class="reference external" href="https://help.liferay.com/hc/en-us/articles/360028712272-Liferay-Home">Liferay Home</a>.</p>
+</div></blockquote>
+</li>
+<li><p class="first">(<em>Subscribers only</em>) Deploy the activation key to the <code class="docutils literal notranslate"><span class="pre">${liferay.home}/deploy</span></code> folder.</p>
+</li>
+<li><p class="first">Verify the following message appears in the application server console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span> <span class="mi">00</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">10.662</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">fileinstall</span><span class="o">-/../../</span><span class="n">liferay</span><span class="o">-</span><span class="n">dxp</span><span class="o">-</span><span class="mf">7.1</span><span class="o">.</span><span class="mf">10.1</span><span class="o">-</span><span class="n">sp1</span><span class="o">/</span><span class="n">osgi</span><span class="o">/</span><span class="n">marketplace</span><span class="p">][</span><span class="n">LPKGArtifactInstaller</span><span class="p">:</span><span class="mi">202</span><span class="p">]</span> <span class="n">The</span> <span class="n">portal</span> <span class="n">instance</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">restarted</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">the</span> <span class="n">installation</span> <span class="n">of</span> <span class="n">file</span><span class="p">:</span><span class="o">/../../</span><span class="n">liferay</span><span class="o">-</span><span class="n">dxp</span><span class="o">-</span><span class="mf">7.1</span><span class="o">.</span><span class="mf">10.1</span><span class="o">-</span><span class="n">sp1</span><span class="o">/</span><span class="n">osgi</span><span class="o">/</span><span class="n">marketplace</span><span class="o">/</span><span class="n">Liferay</span><span class="o">%</span><span class="mi">20</span><span class="n">Commerce</span><span class="o">%</span><span class="mi">20</span><span class="o">-%</span><span class="mi">20</span><span class="n">API</span><span class="o">.</span><span class="n">lpkg</span>
+<span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span> <span class="mi">00</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">10.664</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">fileinstall</span><span class="o">-/../..//</span><span class="n">liferay</span><span class="o">-</span><span class="n">dxp</span><span class="o">-</span><span class="mf">7.1</span><span class="o">.</span><span class="mf">10.1</span><span class="o">-</span><span class="n">sp1</span><span class="o">/</span><span class="n">osgi</span><span class="o">/</span><span class="n">marketplace</span><span class="p">][</span><span class="n">LPKGArtifactInstaller</span><span class="p">:</span><span class="mi">202</span><span class="p">]</span> <span class="n">The</span> <span class="n">portal</span> <span class="n">instance</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">restarted</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">the</span> <span class="n">installation</span> <span class="n">of</span> <span class="n">file</span><span class="p">:</span><span class="o">/../../</span><span class="n">liferay</span><span class="o">-</span><span class="n">dxp</span><span class="o">-</span><span class="mf">7.1</span><span class="o">.</span><span class="mf">10.1</span><span class="o">-</span><span class="n">sp1</span><span class="o">/</span><span class="n">osgi</span><span class="o">/</span><span class="n">marketplace</span><span class="o">/</span><span class="n">Liferay</span><span class="o">%</span><span class="mi">20</span><span class="n">Commerce</span><span class="o">%</span><span class="mi">20</span><span class="o">-%</span><span class="mi">20</span><span class="n">Impl</span><span class="o">.</span><span class="n">lpkg</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Shut down the application server completely.</p>
+</li>
+<li><p class="first">Start the application server.</p>
+</li>
+<li><p class="first">Verify that the <code class="docutils literal notranslate"><span class="pre">LPKG</span></code> has begun installation by looking for this message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span> <span class="mi">00</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mf">48.850</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">main</span><span class="p">][</span><span class="n">BaseDeployer</span><span class="p">:</span><span class="mi">877</span><span class="p">]</span> <span class="n">Deploying</span> <span class="n">minium</span><span class="o">-</span><span class="n">theme</span><span class="o">.</span><span class="n">war</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">On the <strong>first</strong> deployment, there are a series of commands followed by this message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span> <span class="mi">00</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mf">51.753</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">main</span><span class="p">][</span><span class="n">ThemeHotDeployListener</span><span class="p">:</span><span class="mi">108</span><span class="p">]</span> <span class="mi">1</span> <span class="n">theme</span> <span class="k">for</span> <span class="n">minium</span><span class="o">-</span><span class="n">theme</span> <span class="ow">is</span> <span class="n">available</span> <span class="k">for</span> <span class="n">use</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Liferay Commerce has been deployed and is ready for use. Store administrators can begin building a storefront and populating their catalog.</p>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Note that if the application server is restarted, Liferay Commerce will not execute the <code class="docutils literal notranslate"><span class="pre">VerifyProcess</span></code> commands a second time.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://web.liferay.com/documents/14/21598941/Liferay+Commerce+2.0+Compatibility+Matrix/0ed97477-f5a7-40a6-b5ab-f00d5e01b75f">Liferay Commerce 2.0 Compatibility Matrix</a></li>
+<li><a class="reference internal" href="installation-overview.html"><span class="doc">Installation Overview</span></a></li>
+<li><a class="reference internal" href="using-the-liferay-commerce-tomcat-bundle.html"><span class="doc">Using the Liferay Commerce Tomcat Bundle</span></a></li>
+<li>Deploying to Liferay DXP Cloud</li>
+<li>Deploying and Configuring Addons</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

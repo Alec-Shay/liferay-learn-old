@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to Product Types &mdash; Liferay Learn Commerce 2.0.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to Product Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/catalog/introduction-to-product-types.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-product-types">
+<h1>Introduction to Product Types<a class="headerlink" href="#introduction-to-product-types" title="Permalink to this headline">¶</a></h1>
+<p>The catalog supports three product types: Simple, Grouped, and Virtual.</p>
+<p><strong><a class="reference internal" href="creating-a-simple-product.html"><span class="doc">Simple Product</span></a></strong>: Any physical product for which inventory is tracked.</p>
+<p><strong><a class="reference internal" href="creating-a-grouped-product.html"><span class="doc">Grouped Product</span></a></strong>: Two or more products from the catalog, packaged together to be sold as a single item. Grouped products are not tracked in inventory. Instead, the catalog tracks all of the products contained in the group individually. A grouped product can contain Simple Products, other Grouped Products, or Virtual Products.</p>
+<p><strong><a class="reference internal" href="creating-a-virtual-product.html"><span class="doc">Virtual Products</span></a></strong>: A virtual product is any non-physical product. Typically, a virtual product’s inventory is not tracked. This may mean that the product is downloaded rather than shipped. Music files, electronic publications, services, and warranties can all be considered virtual goods.</p>
+<div class="section" id="product-detail-reference">
+<h2>Product Detail Reference<a class="headerlink" href="#product-detail-reference" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Product Details" src="../../../_images/0127.png" /></p>
+<p>| Field | Description |
+| — | — |
+| Catalog | Catalog associated with the product - this association is permanent |
+| Name | Product Name |
+| Short Description | Short summary of the product |
+| Full Description | Longer description of the product |</p>
+<div class="section" id="seo">
+<h3>SEO<a class="headerlink" href="#seo" title="Permalink to this headline">¶</a></h3>
+<p>| Field | Description |
+| — | — |
+| Friendly URL | The URL for the product page |
+| Meta Title |  Product title to help search engines locate your products |
+| Meta Description | Product description used by search engines |
+| Meta Keyword | Keywords used by search engines |</p>
+</div>
+<div class="section" id="schedule">
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
+<p>| Field | Description |
+| — | — |
+| Published | Checkbox to enable publication |
+| Display Date | Date the product is published to the Catalog |
+| Expiration Date | Determines when the product will no longer be available, if <em>Never Expire</em> is unchecked |
+| Never Expire | Determines if a product can be scheduled for expiration |</p>
+</div>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="creating-a-simple-product.html"><span class="doc">Creating a Simple Product</span></a></li>
+<li><a class="reference internal" href="creating-a-grouped-product.html"><span class="doc">Creating a Grouped Product</span></a></li>
+<li><a class="reference internal" href="creating-a-virtual-product.html"><span class="doc">Creating a Virtual Product</span></a></li>
+<li><a class="reference internal" href="virtual-product-reference.html"><span class="doc">Virtual Product Reference</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

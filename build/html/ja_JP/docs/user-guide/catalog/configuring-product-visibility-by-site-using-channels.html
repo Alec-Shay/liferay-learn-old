@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuring Product Visibility by Site Using Channels &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Configuring Product Visibility by Site Using Channels</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/catalog/configuring-product-visibility-by-site-using-channels.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuring-product-visibility-by-site-using-channels">
+<h1>Configuring Product Visibility by Site Using Channels<a class="headerlink" href="#configuring-product-visibility-by-site-using-channels" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>By default in Liferay Commerce Products added to any catalog are visible globally - products are visible across all sites added to a Liferay Commerce installation. Store administrators may want to limit product visibility to particular channels based on their criteria.</p>
+<p>For the purpose of this example, we will consider a scenario of a multi-region seller providing products from a single catalog.</p>
+<p><img alt="Catalog organization" src="../../../_images/0117.png" /></p>
+<p>To learn more about the using Channels in Liferay Commerce, see: <a class="reference internal" href="introduction-to-channels.html"><span class="doc">Introduction to Channels</span></a>.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="simple">
+<li>More than one site has been created.</li>
+<li>Each site has an associated channel.</li>
+<li>Products have been added to a catalog.</li>
+</ol>
+</div>
+<div class="section" id="configuring-product-filter-channels">
+<h2>Configuring Product Filter Channels<a class="headerlink" href="#configuring-product-filter-channels" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To configure a product to be available in a specific channel, follow these steps:</p>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Click a product (<em>Torque Converters</em> in this example).</p>
+</li>
+<li><p class="first">Click the <em>Configuration</em> sub-tab.</p>
+</li>
+<li><p class="first">Click the <em>Channels</em> sidebar option.</p>
+</li>
+<li><p class="first">Switch the <em>Enable filter channels</em> toggle to <em>Yes</em>.</p>
+</li>
+<li><p class="first">Check the boxes for each Channel (in this case, the <em>NA Minium Store</em>) where the product should be visible.</p>
+<p><img alt="Product configuration" src="../../../_images/0212.png" /></p>
+</li>
+<li><p class="first">Click <em>Save</em>.</p>
+</li>
+</ol>
+<p>The product will be visible only in the selected Channels.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="introduction-to-channels.html"><span class="doc">Introduction to Channels</span></a></li>
+<li><a class="reference internal" href="managing-channels.html"><span class="doc">Managing Channels</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

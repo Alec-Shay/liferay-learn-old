@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Low Stock Activity &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Low Stock Activity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/catalog/low-stock-activity.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="low-stock-activity">
+<h1>Low Stock Activity<a class="headerlink" href="#low-stock-activity" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>This article documents how to set up automated actions for when product inventory falls below a specified threshold. Out-of-the-box, Liferay Commerce allows users to automatically set products as unpublished when they reach the defined inventory threshold. Store owners may also  configure the catalog to display remaining product quantity in inventory.</p>
+<p>To configure a Low Stock Activity:</p>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Click on a product (for example, <em>U-Joint</em>)</p>
+</li>
+<li><p class="first">Click the <em>Configurations</em> sub-tab.</p>
+</li>
+<li><p class="first">Enter the following:</p>
+<ul class="simple">
+<li><strong>Inventory Engine</strong>: Default</li>
+<li><strong>Availability Estimate</strong>: 5-7 Days</li>
+<li><strong>Display Availability</strong>: YES</li>
+<li><strong>Display Stock Quantity</strong>: YES</li>
+<li><strong>Low Stock Threshold</strong>: 5</li>
+<li><strong>Low Stock Action</strong>: Set as Unpublished</li>
+<li><strong>Allow Back Orders</strong>: Yes</li>
+<li><strong>Minimum Order Quantity</strong>: 1</li>
+<li><strong>Maximum Order Quantity</strong>: 5</li>
+<li><strong>Allowed Order Quantities</strong>: 1</li>
+<li><strong>Multiple Order Quantity</strong>: 1</li>
+</ul>
+<p><img alt="Product Configuration for Low Stock Activity" src="../../../_images/0128.png" /></p>
+</li>
+<li><p class="first">Click <em>Save</em>.</p>
+</li>
+</ol>
+<p>The Low Stock Activity for this product has been configured. In the future, should the number of stock fall below <em>5</em>, the 「U-Joint」 product will be unpublished.</p>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="../product-inventory-configuration-reference/README">Product Inventory Configuration Reference</a></li>
+<li><a class="reference internal" href="../../developer-guide/tutorial/implementing-a-custom-low-stock-activity.html"><span class="doc">Implementing a Custom Low Stock Activity</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

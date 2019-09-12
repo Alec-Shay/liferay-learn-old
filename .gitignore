@@ -9,7 +9,6 @@
 .settings/
 _build/
 bin/
-build/
 classes/
 ivy.xml.MD5
 lib/

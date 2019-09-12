@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Checkout &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Checkout</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/content/checkout.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="checkout">
+<h1>Checkout<a class="headerlink" href="#checkout" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>The Checkout page is a required page that contains the <em>Checkout</em> widget. This widget is populated once a buyer clicks <em>Checkout</em> to submit an order. Custom checkout steps can also be implemented using extension points. To learn more see <a class="reference internal" href="../../developer-guide/tutorial/implementing-a-custom-checkout-step.html"><span class="doc">Implementing a Custom Checkout Step</span></a>.</p>
+<p><img alt="Checkout widget" src="../../../_images/0142.png" /></p>
+<p>During the checkout process, there are several pages to enter the buyer』s shipping and billing addresses and choose a shipment method. The last two pages are the <em>Order Summary</em> and <em>Order Confirmation</em>.</p>
+<div class="section" id="entering-a-shipping-address">
+<h2>Entering a Shipping Address<a class="headerlink" href="#entering-a-shipping-address" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><img alt="Shipping Address step" src="../../../_images/0227.png" /></p>
+<p>Note that if the buyer checks the <em>Use shipping address as billing address</em>, this will skip the Billing Address page.</p>
+</div>
+<div class="section" id="selecting-shipping-method">
+<h2>Selecting Shipping Method<a class="headerlink" href="#selecting-shipping-method" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><img alt="Shipping Method step" src="../../../_images/0310.png" /></p>
+<p>Shipping methods available to a buyer are configured by changing <em>Shipping Methods</em> in <em>Site Administration</em> → <em>Commerce</em> → <em>Settings</em> -&gt; <em>Shipping Methods</em>. See <a class="reference internal" href="../sales/using-the-flat-rate-shipping-method.html"><span class="doc">Using the Flat Rate Shipping Method</span></a> for more information.</p>
+</div>
+<div class="section" id="entering-a-billing-address">
+<h2>Entering a Billing Address<a class="headerlink" href="#entering-a-billing-address" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>As noted above, this page appears only if the buyer』s billing address is different from the shipping address.</p>
+<p><img alt="Billing Address step" src="../../../_images/048.png" /></p>
+</div>
+<div class="section" id="viewing-the-order-summary">
+<h2>Viewing the Order Summary<a class="headerlink" href="#viewing-the-order-summary" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><img alt="Order Summary step" src="../../../_images/058.png" /></p>
+</div>
+<div class="section" id="confirming-the-order">
+<h2>Confirming the Order<a class="headerlink" href="#confirming-the-order" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><img alt="Order Confirmation step" src="../../../_images/066.png" /></p>
+<p>When an order is confirmed, the order is ready for processing by the seller. See <a class="reference internal" href="../sales/order-life-cycle.html"><span class="doc">Order Life Cycle</span></a> for more information.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="widget-reference.html"><span class="doc">Widget Reference Guide</span></a></li>
+<li><a class="reference external" href="https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages">Creating Pages</a></li>
+<li><a class="reference internal" href="../../developer-guide/tutorial/implementing-a-custom-checkout-step.html"><span class="doc">Implementing a Custom Checkout Step</span></a></li>
+<li><a class="reference internal" href="../sales/using-the-flat-rate-shipping-method.html"><span class="doc">Using the Flat Rate Shipping Method</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

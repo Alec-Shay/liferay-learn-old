@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja-JP" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja-JP" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Specifications &mdash; Liferay Learn Commerce 2.0.5 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Liferay Learn Commerce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Liferay Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/README.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/tutorial/adding-a-new-discount-rule-type.html">Adding a New Discount Rule Type</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Liferay Learn Commerce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Specifications</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/docs/user-guide/catalog/specifications.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="specifications">
+<h1>Specifications<a class="headerlink" href="#specifications" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>A specification stores a single piece of product information. A product’s dimensions, color, weight, capacity, or almost any other attribute can be recorded as a specification. Specifications make it easy to present product information and simplify the process of comparing similar products.</p>
+<p>To organize specifications and make them easy to display and maintain, specification data is ordered into one of three components: groups, labels, and values.</p>
+<p>| Name | Description |
+| — | — |
+| <a class="reference external" href="#specification-groups">Specification Group</a> | Specifications with common characteristics can be organized into a group. |
+| <a class="reference external" href="#specification-labels">Specification Label</a> | Names a specification. |
+| <a class="reference external" href="#specification-values">Specification Value</a> | Provides product-specific information. |</p>
+<div class="section" id="specification-groups">
+<h2>Specification Groups<a class="headerlink" href="#specification-groups" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Click the <em>Specifications</em> tab.</p>
+</li>
+<li><p class="first">Click the <em>Specification Groups</em> sub-tab. By default, there are five Specification Groups included:</p>
+<p><img alt="Specification Groups sub-tab" src="../../../_images/0136.png" /></p>
+</li>
+</ol>
+<p>To add a new Specification Group, click the (+) button.</p>
+<p>| Field | Description |
+| — | — |
+| Title | Name of the Specification Group. |
+| Description | Explanation of what the specifications have in common |
+| Priority | Establishes the order to display the specification groups. Smaller numbers go first. |
+| Key | A unique identifier for referring to this group programmatically. |</p>
+<p><img alt="Adding a specification group" src="../../../_images/0222.png" /></p>
+</div>
+<div class="section" id="specification-labels">
+<h2>Specification Labels<a class="headerlink" href="#specification-labels" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To create a specification label:</p>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Click the <em>Specifications</em> tab.</p>
+</li>
+<li><p class="first">Click the <em>Specifications Labels</em> sub-tab.</p>
+</li>
+<li><p class="first">There are nine Specification Labels included by default:</p>
+<p><img alt="Specification Labels sub-tab" src="../../../_images/037.png" /></p>
+</li>
+</ol>
+<p>To add a new Specification Group, click the (+) button.</p>
+<p>| Field | Description |
+| — | — |
+| Label | Name of the Label. |
+| Description | Explanation of the label. |
+| Use in Faceted Navigation | Toggle whether this label is used in faceted navigation. |
+| Default Specification Group | Dropdown menu for which group this label is to be associated. |
+| Key | A unique identifier for referring to this group programmatically. |</p>
+<p><img alt="Adding a specification label" src="../../../_images/046.png" /></p>
+<p>The label has been created, but assigning a value to it must be done on the product level.</p>
+</div>
+<div class="section" id="specification-values">
+<h2>Specification Values<a class="headerlink" href="#specification-values" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Specification values are more limited in scope than groups and labels. Groups and labels are scoped to the catalog, which means that once they are created, they can be assigned to any product in the catalog. Values, however, are scoped to the product, and have no impact anywhere but on the product to which they are assigned.</p>
+<p>To create a specification label, you must first assign a label to a product.</p>
+<ol>
+<li><p class="first">Navigate to the <em>Control Panel</em> → <em>Commerce</em> → <em>Products</em>.</p>
+</li>
+<li><p class="first">Click on a product (for example, <em>Torque Converter</em>. This sample product is added when using the Minium accelerator.)</p>
+</li>
+<li><p class="first">Click on the <em>Specifications</em> sub-tab.</p>
+</li>
+<li><p class="first">The following values have been added by default:</p>
+<p><img alt="Specifications sub-tab" src="../../../_images/056.png" /></p>
+</li>
+<li><p class="first">Click the (+) button.</p>
+</li>
+<li><p class="first">Check the boxes for one or more specification labels from the list of specification labels.</p>
+</li>
+<li><p class="first">Click <em>Add</em> to close the pop-up.</p>
+</li>
+</ol>
+<p>This assigns the selected labels to the product.</p>
+<p>Next, edit the label to give it a value.</p>
+<ol class="simple">
+<li>Click on the 3-dot icon next to the new label.</li>
+<li>Click <em>Edit</em>.</li>
+</ol>
+<p>|Field | Description |
+|—– | ——— |
+|Value | Short description of what the product is made of |
+|Group | Dropdown menu for which Specification Group. |
+|Priority | Establishes the order to display the specification groups. Smallest numbers go first. |</p>
+<p><img alt="Adding specification details" src="../../../_images/064.png" /></p>
+<p>You can also override the specification group that was selected when the label was created. When editing the label to assign a value, you can choose any group from the <em>Group</em> drop-down box. This change applies only to the current product and has no effect on any other products which use the same label.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liferay, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
