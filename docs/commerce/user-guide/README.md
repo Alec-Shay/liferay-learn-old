@@ -1,5 +1,3 @@
-# Using Liferay Commerce
-
 ## Getting Started
 
 * [Introduction to Liferay Commerce](./getting-started/introduction-to-liferay-commerce.md)

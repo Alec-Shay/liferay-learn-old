@@ -2,6 +2,14 @@
 
 Welcome to the Liferay Commerce Developer Guide.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   tutorial/adding-a-new-discount-rule-type
+   tutorial/adding-a-new-product-data-source-for-the-product-publisher-widget
+   tutorial/adding-a-new-product-type
+
 ## Getting Started
 
 * [Introduction to the Liferay Commerce Developer Guide](./introduction/introduction-to-the-liferay-commerce-developer-guide.md)
